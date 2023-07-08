@@ -17,6 +17,6 @@ for file in "${files[@]}"; do
   # Set the output file paths
   output_file_1="${file}_1_trim.fastq"
   output_file_2="${file}_2_trim.fastq"
-  
+#Run fastqc for quality check of trimmed sequence
   fastqc --threads 40 --outdir SRA_QC "${output_file_1}" "${output_file_2}"
 done
