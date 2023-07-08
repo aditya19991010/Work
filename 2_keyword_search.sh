@@ -2,7 +2,7 @@
 
 filename= /media/lgi/Disk1/professional/dataware/Proso/52848/IIMR/all_mk_files/compiled_18.mk 
 
-# Define an array of Marker key
+# Define an array of Marker key 
 MK_key=(
 	"MK22"
 	"MK1337"
@@ -371,10 +371,10 @@ Chr_key=(
 )
 
 for i in "${!MK_key[@]}"; do
-  # Set the input and output directory paths
+  # Set the keys name
   key_1="${MK_key[$i]}"
   key_2="${Chr_key[$i]}"
   #output_dir="${file%.fasta}_output"
-  # Run the MEME program with the input file and output directory names
+  # Run the grep with marker key and chromosomal key
   grep -q "${key_1}" "$filename" | grep -q "${key_2}"
 done
