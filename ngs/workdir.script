@@ -1,0 +1,18 @@
+.
+├── alignment_output
+├── reads
+├── ref_genome
+├── scripts
+│   ├── 01_download_reads.sh
+│   ├── 02_run_fastqc.sh
+│   ├── 03_trim_reads.sh
+│   ├── 04_run_fastqc_trimmed.sh
+│   ├── 05_download_ecoli_reference.sh
+│   ├── 06_build_bowtie_index.sh
+│   ├── 07_align_reads.sh
+│   ├── 08_compress_sort.sh
+│   ├── 09_extract_unmapped.sh
+│   ├── 10_extract_region.sh
+│   └── 11_align_sort.sh
+└── trimmed_data
+

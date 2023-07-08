@@ -1,0 +1,2 @@
+ samtools idxstatsi 
+#reports alignment summary statistics 

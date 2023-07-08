@@ -1,0 +1,1 @@
+makeblastdb -in -dbtype -out -logfile

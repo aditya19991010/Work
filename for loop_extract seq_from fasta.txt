@@ -1,0 +1,2 @@
+for i in `cat ID.txt`; do grep -A1 $i <file.fasta>; done > output.fasta.greped_uniq_last
+

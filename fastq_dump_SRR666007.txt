@@ -1,0 +1,2 @@
+for ((i=38; i<= 79; i++)); do fastq-dump -O /home/locuz/Desktop/professional/SRA_DOWNLOAD_DATA/sra -v --fasta SRR66607$i ; done
+

@@ -1,0 +1,37 @@
+#!bin/bash
+
+echo "enter zip file"
+read zipfile
+unzip $zipfile 
+
+#In this, I've used ${zipfile%.*} to remove the file extension from the $zipfile variable. This assumes that the zip file has a standard file extension like .zip.
+
+cd "${zipfile%.*}"
+
+echo "reading summary.txt file"
+
+sed -n '/Possible Source/,/>>END_MODULE/p' fastqc_data.txt | sed '1d;$d' > ${zipfile%.*}.column
+
+echo "separating this column and saving in ${zipfile%.*}.column"
+awk '{print $1}' ${zipfile%.*}.column
+
+awk '{print $1}' ${zipfile%.*}.column > ${zipfile%.*}.column.txt
+
+echo "converting in fasta format"
+
+#add Unique seq ID
+awk '{print ">Seq_"NR"\n"$0}' ${zipfile%.*}.column.txt > ${zipfile%.*}.fasta
+
+cat ${zipfile%.*}.fasta
+
+echo "moving file"
+mv ${zipfile%.*}.fasta ../overrepresented_Seqs 
+
+# Check the exit status of the last command
+if [ $? -eq 0 ]; then
+  echo "The script completed successfully."
+else
+  echo "The script failed."
+fi
+
+

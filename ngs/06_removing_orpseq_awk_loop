@@ -1,0 +1,36 @@
+#!bin/bash
+
+
+for i in `cat array_SRR.txt`
+do
+	#In this, I've used ${i%.*} to remove the file extension from the $zipfile variable. This assumes that the zip file has a standard file extension like .zip.
+	unzip $i 
+	cd ${i%.*}
+	
+	echo "reading summary.txt file"
+
+	sed -n '/Possible Source/,/>>END_MODULE/p' fastqc_data.txt | sed '1d;$d' > ${i%.*}.column
+
+	echo "separating this column and saving in ${i%.*}.column"
+	awk '{print $1}' ${i%.*}.column
+
+	awk '{print $1}' ${i%.*}.column > ${i%.*}.column.txt
+
+	echo "converting in fasta format"
+
+	#add Unique seq ID
+	awk '{print ">Seq_"NR"\n"$0}' ${i%.*}.column.txt > ${i%.*}.fasta
+
+	cat ${i%.*}.fasta
+
+	echo "moving file"
+	mv ${i%.*}.fasta ../overrepresented_Seqs 
+done
+# Check the exit status of the last command
+if [ $? -eq 0 ]; then
+  echo "The script completed successfully."
+else
+  echo "The script failed."
+fi
+
+

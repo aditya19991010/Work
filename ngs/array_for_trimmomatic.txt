@@ -1,0 +1,16 @@
+/home/aditya/NGS/SRR6660738_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660738_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660748_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660748_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660754_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660754_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660764_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660764_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660767_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660767_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660768_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660768_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660772_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660772_2_trim.fastq_2P
+/home/aditya/NGS/SRR6660777_1_trim.fastq_1P
+/home/aditya/NGS/SRR6660777_2_trim.fastq_2P
