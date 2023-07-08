@@ -1,2 +1,4 @@
+#create array for extracting sequences from fasta file (warp = 999999)
+
 for i in `cat ID.txt`; do grep -A1 $i <file.fasta>; done > output.fasta.greped_uniq_last
 
