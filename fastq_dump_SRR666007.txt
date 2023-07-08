@@ -1,2 +1,4 @@
+#loop for downloading SRR files ranging from i = 38 to 79
+
 for ((i=38; i<= 79; i++)); do fastq-dump -O /home/locuz/Desktop/professional/SRA_DOWNLOAD_DATA/sra -v --fasta SRR66607$i ; done
 
