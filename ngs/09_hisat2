@@ -9,6 +9,6 @@ do
   input_file_2="${i}_2_trim.fastq_2P"
   
   # Run HISAT2 for paired end putting both files and common output in SAM format will get generate
-  hisat2 -x genome -1 "${input_file_1}" -2 "{input_file_2}" -S "${output_file}".sam
+  hisat2 -x reference_genome -1 "${input_file_1}" -2 "{input_file_2}" -S "${output_file}".sam
 done
 
