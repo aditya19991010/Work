@@ -10,12 +10,8 @@
 
 #module load openmpi/4.1.4/gcc-x
 
-#mpirun --mca btl openib,vader,self \
-#       --mca btl_openib_allow_ib 1 \
-#        hostname
-
 
 module load anaconda3
-source activate Bioinfo_aditya
+source activate LGI_aditya #activate the environment
 blastp -query Query.fasta -db database_file_name -out blastp_results_queue.tsv -evalue "evalue" -outfmt 6 -qcov_hsp_perc 50 -num_threads 40
 ~                                                                                  
