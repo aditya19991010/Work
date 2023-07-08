@@ -4,9 +4,10 @@ echo "To perform blastp"
 echo Enter database file
 read database_file
 
+echo "enter database type  = "nucl" for nucleotide and "prot" for protein"
+read dbtype
 
-
-makeblastdb -in "$database_file" -dbtype prot
+makeblastdb -in "$database_file" -dbtype "$dbtype"
 
 
 echo "Enter query file"
