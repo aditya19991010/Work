@@ -14,6 +14,8 @@ In python everything is considered as an object. Therefore, a function is requir
 #     print(i, end=' ' )
 # print("\n")
 
+S= "Welcome to python programming"
+
 def strings_func():
     #slicing upto 4th index
     print(S[5:])
@@ -76,8 +78,7 @@ def stringops():
 
 
 def main():
-    S = "Welcome to python programming"
-
+    S= "Welcome to python programming"
     return stringops()
     #return strings_func()
 
