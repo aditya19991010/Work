@@ -1,12 +1,11 @@
 '''List,tuple, dictionary and set'''
 
+
 '''create a list of 2x2 matrix'''
 ''' 1. matrix addition
- 2. count number of occurrences of an item ina list
+ 2. count number of occurrences of an item in a list
  3. swap the 1st and last element of the list
 '''
-
-
 
 def matrix_add():
     for row in range(len(A)):
@@ -20,7 +19,7 @@ def matrix_add():
 def matrix_multi():
 
     for row in range(len(A)):
-        for column in range(len(B[0])):
+        for column in range(len(B)):
             C[row][column] = A[row][column] * B[row][column]
 
     for r in C:
@@ -37,4 +36,3 @@ if __name__ == "__main__":
     B = [[4, 5, 6], [5, 6, 7], [2, 4, 5]]
     C = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     main()
-
