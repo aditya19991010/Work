@@ -45,7 +45,8 @@ run_something_with_other_func(print_args, "Rohit", "Kohli")
 
 def outer(a,b):
     def inner(c,d):
-        return c + d
+        sum = c+d
+        return sum
     return a+b
     print("Completed another outer and inner function")
 
