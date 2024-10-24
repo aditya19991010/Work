@@ -29,12 +29,9 @@ def swap(a ,b) :
 #     print(f"changed value of a is {a}, b is {b}")
 #     return(a,b)
 
-def main():
-    a = 4
-    b = 3
-    print(f"Initial value of a = {a}, and b = {b}")
-    swapped_value = swap(a,b)
-    print(swapped_value)
 
-if __name__=='__main__':
-    main()
+a = 4
+b = 3
+print(f"Initial value of a = {a}, and b = {b}")
+swapped_value = swap(a,b)
+print(swapped_value)
