@@ -1,8 +1,6 @@
 # #generators
 # import math
 # import time
-# from doctest import COMPARISON_FLAGS
-# from importlib.metadata import Lookup
 #
 # from Coursework_shyam.lec36 import functions
 #
